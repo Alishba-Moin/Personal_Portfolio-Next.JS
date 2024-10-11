@@ -29,7 +29,7 @@ export default function WorkSliderBtns() {
         aria-label="Previous Slide" // Accessibility label for screen readers
       >
         {/* Left Caret Icon */}
-        <PiCaretLeftBold />
+        <PiCaretLeftBold className="text-primary"/>
       </Button>
 
       {/* Right Navigation Button */}
@@ -39,7 +39,7 @@ export default function WorkSliderBtns() {
         aria-label="Next Slide" // Accessibility label for screen readers
       >
         {/* Right Caret Icon */}
-        <PiCaretRightBold />
+        <PiCaretRightBold className="text-primary"/>
       </Button>
     </div>
   );
