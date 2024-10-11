@@ -1,27 +1,125 @@
+/* globals.css */
+
+/* Tailwind CSS Directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+/* Custom Styles and Animations */
+@layer base {
+  /* Root Variables for Fonts */
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-playfair: 'Playfair Display', serif;
+    --font-lato: 'Lato', sans-serif;
+  }
+
+  /* Body Styles */
+  body {
+    @apply bg-primary text-white font-sans leading-loose; /* Use font-sans for body text */
+    font: 100% / 1.5 var(--font-lato), sans-serif;
+    color: hsl(230, 100%, 95%);
+    background: linear-gradient(135deg, hsl(230, 40%, 12%), hsl(230, 20%, 7%));
+
+  }
+
+  /* Heading Styles */
+  h1 {
+    @apply text-[48px] xl:text-[80px] leading-tight font-semibold font-primary mb-1 animate-lights; /* Apply Playfair font and animation to h1 */
+  }
+
+  h2 {
+    margin: auto;
+    font-size: 3.5rem;
+    font-weight: 300;
+    animation: lights 5s 750ms linear infinite; /* Animation applied directly */
+  }
+
+  /* Other heading styles */
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-tight font-semibold font-primary; /* Apply Playfair font to h2 */
+  }
+
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-tight font-semibold font-primary; /* Apply Playfair font to h3 */
+  }
+
+  /* Paragraph and Other Text Styles */
+  p, li, span {
+    @apply font-sans; /* Apply Lato font to paragraphs and other elements */
+  }
+
+  /* Text Outline Classes */
+  .text-outline {
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff; /* For better browser support */
+  }
+
+  .text-outline-hover:hover {
+    -webkit-text-stroke: 1px #f0abfc;
+    text-stroke: 1px #f0abfc; /* For better browser support */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+/* Define Custom Animation in Utilities Layer */
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @keyframes lights {
+    0% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+    30% { 
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    40% { 
+      color: hsl(230, 100%, 95%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    70% {
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    100% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+  }
+
+  /* Animation classes */
+  .animate-lights {
+    animation: lights 5s 750ms linear infinite;
+  }
+
+  /* Disable animations for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    h1, h2 {
+      animation: none;
+      color: hsl(230, 100%, 95%);
+      text-shadow: none;
+    }
   }
 }
