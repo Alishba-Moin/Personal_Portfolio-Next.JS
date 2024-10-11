@@ -13,25 +13,77 @@ import {
 import Link from "next/link"; // Import Link for navigation between pages
 import Image from "next/image"; // Import Image for optimized image loading
 import WorkSliderBtns from "@/components/ui/workSliderBtn"; // Import custom slider buttons
-
-// Define an array of projects with relevant details
 const projects = [
   {
     num: "01",
     title: "Full-Stack E-Commerce Platform",
     description:
       "A comprehensive e-commerce platform with product management and payment integration using React.js, Next.js, Node.js, and MongoDB.",
-    thumbnail: "/image/e-shop.png", // Path to project thumbnail image
+    thumbnail: "/image/e-shop.png",
     technologies: [
       { name: "Next.js" },
       { name: "Tailwind CSS" },
       { name: "React.js" },
       { name: "Node.js" },
     ],
-    liveDemo: "https://next-js-milestone-3.vercel.app/", // Link to live demo
-    github: "https://github.com/Alishba-Moin/Next-JS_Milestone-3", // Link to GitHub repository
+    liveDemo: "https://next-js-milestone-3.vercel.app/",
+    github: "https://github.com/Alishba-Moin/Next-JS_Milestone-3",
   },
-  // Additional project entries follow the same structure...
+  {
+    num: "02",
+    title: "Blog Post Platform",
+    description: 
+      "A dynamic blog platform where users can create, edit, and delete posts. Built with Next.js, React.js, and a custom RESTful API. It features GitHub authentication, allowing users to sign in using their GitHub accounts for a seamless experience.",
+    thumbnail: "/image/blog.png",
+    technologies: [
+      { name: "Next.js" }, 
+      { name: "React.js" }, 
+      { name: "Node.js" }, 
+      { name: "RestFul APIs" }, 
+      { name: "GitHub Authentication" }],
+    liveDemo: "https://next-js-milestone-4.vercel.app/",
+    github: "https://github.com/Alishba-Moin/Next.JS_Milestone-4"
+  },
+  {
+    num: "03",
+    title: "Movie Searcher",
+    description: 
+      "A web application that allows users to search for movies using the OMDB API. Features include search functionality, add to favorites, movie details, and responsive design.",
+    thumbnail: "/image/movie.png",
+    technologies: [
+      { name: "React.js" }, 
+      { name: "Next.js" }, 
+      { name: "Tailwind CSS" }, 
+      { name: "RESTful API" }],
+    liveDemo: "https://30-days-of-30-projects-8qex.vercel.app/",
+    github: "https://github.com/Alishba-Moin/30-Days_Of_30-Projects/tree/master/movie-search-app"
+  },
+  {
+  num: "04",
+  title: "GitHub Previewer",
+  description: "An application that fetches and displays GitHub user profiles and repositories. Built with React.js, Next.js, and the GitHub API.",
+  thumbnail: "/image/github.png",
+  technologies: [
+    { name: "React.js" }, 
+    { name: "Next.js" }, 
+    { name: "Tailwind CSS" }, 
+    { name: "GitHub API" }],
+  liveDemo: "https://19-github-profile-viewer-mabs73nh0-alishba-moins-projects.vercel.app/",
+  github: "https://github.com/Alishba-Moin/30-Days_Of_30-Projects/tree/master/19_github-profile-viewer"
+},
+{
+  num: "05",
+  title: "HTML Preview App",
+  description: "A simple application that allows users to write HTML code and see the live preview of the output. Built with Next.js, HTML, CSS, and JavaScript.",
+  thumbnail: "/image/html.png",
+  technologies: [
+    { name: "Next.js" },
+    { name: "HTML" }, 
+    { name: "CSS" }, 
+    { name: "JavaScript" }],
+  liveDemo: "https://30-days-of-30-projects-5g88.vercel.app/",
+  github: "https://github.com/Alishba-Moin/30-Days_Of_30-Projects/tree/master/html-preview-app"
+}
 ];
 
 // Define the Projects component
