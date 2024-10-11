@@ -1,15 +1,11 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "next/typescript"
-  ],
+  "extends": "next/core-web-vitals",
   "rules": {
-    "@typescript-eslint/quotes": "off", // Disable TypeScript quotes rule
-    "quotes": "off", // Disable quotes rule
-    "no-useless-escape": "off", // Disable useless escape rule
-    "react/no-unescaped-entities": "off",  // Disable unescaped entities rule
-    "@typescript-eslint/no-unused-vars": "off",  // Disable unused variables rule
-    "@typescript-eslint/no-empty-object-type": "off", // Disable empty object type rule
-    "@typescript-eslint/no-explicit-any": "off" // Disable explicit any rule
-  }
+     "react/no-unescaped-entities": "off",
+    "@typescript-eslint/quotes": "off",
+    "quotes": [0],
+    "avoidEscape": 0,
+    "allowTemplateLiterals": 0,
+    "no-useless-escape": 0, 
+    }
 }
