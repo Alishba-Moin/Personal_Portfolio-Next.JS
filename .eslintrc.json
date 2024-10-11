@@ -4,8 +4,12 @@
     "next/typescript"
   ],
   "rules": {
+    "@typescript-eslint/quotes": "off", // Disable TypeScript quotes rule
+    "quotes": "off", // Disable quotes rule
+    "no-useless-escape": "off", // Disable useless escape rule
     "react/no-unescaped-entities": "off",  // Disable unescaped entities rule
     "@typescript-eslint/no-unused-vars": "off",  // Disable unused variables rule
     "@typescript-eslint/no-empty-object-type": "off" // Disable empty object type rule
   }
 }
+
