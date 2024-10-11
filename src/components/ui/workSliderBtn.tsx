@@ -2,18 +2,10 @@
 
 // Import necessary hooks and components
 import { useSwiper } from "swiper/react"; // Hook to access Swiper instance
-import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi"; // Importing left and right caret icons
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { Button } from "./button"; // Importing a custom Button component
 
-/**
- * WorkSliderBtns Component
- * 
- * This component renders navigation buttons for the Swiper slider.
- * - Left Button: Navigates to the previous slide.
- * - Right Button: Navigates to the next slide.
- * 
- * The buttons are styled using Tailwind CSS classes and include hover effects.
- */
+
 export default function WorkSliderBtns() {
   // Access the Swiper instance to control slider navigation
   const swiper = useSwiper();
@@ -26,20 +18,16 @@ export default function WorkSliderBtns() {
       <Button
         className="hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
         onClick={() => swiper.slidePrev()} // Handler to navigate to the previous slide
-        aria-label="Previous Slide" // Accessibility label for screen readers
       >
-        {/* Left Caret Icon */}
-        <PiCaretLeftBold className="text-primary"/>
+        <FiChevronLeft className="text-white/10"/>
       </Button>
 
       {/* Right Navigation Button */}
       <Button
         className=" hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
         onClick={() => swiper.slideNext()} // Handler to navigate to the next slide
-        aria-label="Next Slide" // Accessibility label for screen readers
       >
-        {/* Right Caret Icon */}
-        <PiCaretRightBold className="text-primary"/>
+        <FiChevronRight className="text-white-10"/>
       </Button>
     </div>
   );
