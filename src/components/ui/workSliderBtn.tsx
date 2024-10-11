@@ -24,7 +24,7 @@ export default function WorkSliderBtns() {
       
       {/* Left Navigation Button */}
       <Button
-        className="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] flex justify-center items-center rounded-full transition-all"
+        className="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
         onClick={() => swiper.slidePrev()} // Handler to navigate to the previous slide
         aria-label="Previous Slide" // Accessibility label for screen readers
       >
@@ -34,7 +34,7 @@ export default function WorkSliderBtns() {
 
       {/* Right Navigation Button */}
       <Button
-        className="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] flex justify-center items-center rounded-full transition-all"
+        className="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
         onClick={() => swiper.slideNext()} // Handler to navigate to the next slide
         aria-label="Next Slide" // Accessibility label for screen readers
       >
