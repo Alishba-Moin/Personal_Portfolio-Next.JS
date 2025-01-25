@@ -4,7 +4,6 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
-import classNames from 'classnames'; // Import classnames for conditional classes
 
 const links = [
   { name: "home", path: "/" },
