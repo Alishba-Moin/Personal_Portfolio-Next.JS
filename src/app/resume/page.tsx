@@ -1,8 +1,8 @@
 "use client"; // Ensures the component is rendered on the client side
 
 // Importing necessary components and icons
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript } from "react-icons/si";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaGithub, FaDatabase   } from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiTypescript, SiFigma, SiSanity   } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { TbApi } from "react-icons/tb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -16,7 +16,7 @@ const about = {
     "Passionate and dedicated IT student specializing in Artificial Intelligence, Web 3.0, and Metaverse technologies. Eager to apply academic knowledge and technical skills to innovative projects in the tech industry. Seeking opportunities to learn, grow, and contribute to cutting-edge technology solutions.",
   info: [
     { fieldName: "Name", fieldValue: "Alishba Moin" },
-    { fieldName: "Phone-no", fieldValue: "+92 317 245 567" },
+    { fieldName: "Phone-no", fieldValue: "03170235053" },
     { fieldName: "Location", fieldValue: "Hyderabad, Sindh" },
     { fieldName: "Nationality", fieldValue: "Pakistan" },
     { fieldName: "Email", fieldValue: "alishbamoin797@gmail.com" },
@@ -61,7 +61,7 @@ const education = {
     {
       institution: "Governor Sindh Initiative For IT",
       degree: "Governor Sindh Initiative for Artificial Intelligence, Web 3.0 & Metaverse",
-      duration: "2023 - 2024 (Expected)",
+      duration: "2023 - 2025 (Expected)",
     },
     {
       institution: "University Of Sindh, Jamshoro, Pakistan",
@@ -109,7 +109,9 @@ const skills = {
         { icon: <FaGithub />, name: "GitHub" },
         { icon: <VscVscode />, name: "Visual Studio Code" },
         { icon: <TbApi />, name: "RESTful API" },
-      ],
+        { icon: <SiFigma />, name: "Figma" },
+        { icon: <SiSanity   />, name: "Sanity" }, 
+      ]
     },
   ],
 };
