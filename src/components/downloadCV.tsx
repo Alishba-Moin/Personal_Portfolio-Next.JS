@@ -6,7 +6,7 @@ import { FiDownload } from 'react-icons/fi';
 const  DownloadCV= () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/CV.pdf'; // Ensure CV.pdf is in the public directory
+    link.href = '/alishbaCV.pdf'; // Ensure CV.pdf is in the public directory
     link.download = 'Alishba_Moin_CV.pdf'; // Desired download file name
     document.body.appendChild(link);
     link.click();
